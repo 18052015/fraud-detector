@@ -1,13 +1,14 @@
 import pandas as pd
+import numpy as np
 from fraud_detector import load_data, preprocess_data, train_model, predict_fraud
 
 # Gerar dados fictícios para demonstração
 def generate_fictitious_data(num_transactions=100):
     data = {
         'transaction_id': range(1, num_transactions + 1),
-        'transaction_amount': [round(abs(x), 2) for x in pd.np.random.normal(loc=100, scale=50, size=num_transactions)],
-        'transaction_type': pd.np.random.choice(['online', 'store', 'atm'], size=num_transactions),
-        'timestamp': pd.to_datetime(pd.np.random.randint(1420070400, 1420070400 + 3600*24*30, num_transactions), unit='s')
+        'transaction_amount': [round(abs(x), 2) for x in np.random.normal(loc=100, scale=50, size=num_transactions)],
+        'transaction_type': np.random.choice(['online', 'store', 'atm'], size=num_transactions),
+        'timestamp': pd.to_datetime(np.random.randint(1420070400, 1420070400 + 3600*24*30, num_transactions), unit='s')
     }
     df = pd.DataFrame(data)
     # Injetar algumas anomalias (valores muito altos)
