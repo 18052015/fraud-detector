@@ -1,5 +1,8 @@
 # 🕵️ Projeto de Antifraude - Exemplo
 
+![Goku Power Up](https://media.tenor.com/0UBRe2MysnTfAAAAAC/dragon-ball-fighterz-goku-power-up.gif)
+
+
 Este projeto demonstra como detectar transações suspeitas utilizando Python e análise de dados.  
 O objetivo é identificar padrões que possam indicar **fraudes financeiras** em tempo real.
 
